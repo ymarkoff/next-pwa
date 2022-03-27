@@ -2,6 +2,7 @@
 import { useEffect } from "react"
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
+		console.log('test');
     if("serviceWorker" in navigator) {
       window.addEventListener("load", function () {
        navigator.serviceWorker.register("/sw.js").then(
